@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <fstream>
 #include <sstream>
-
+#include <iomanip> 
 
 using namespace std;
 
@@ -78,7 +78,7 @@ int main(){
 			input.push_back(f);
 			s++;
 			Median = getMedian(input, s);
-			out_file  << Median << endl;
+			out_file << setprecision(1) << fixed << Median << endl;
 		}
 		in_file.close();
 	}
